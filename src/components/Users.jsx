@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {  useParams } from 'react-router-dom'
 
 const Users = () => {
     const {id} = useParams();
+    const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
      const users = [
     {
       id : 1,  
       name: "Leanne Graham",
-      email: "Leanne Graham@example.com",
+      email: "Sincere@april.biz",
       phone: "123-456-7890",
-      username: "Leanne Graham",
-      website: "www.Leanne Graham.com"
+      username: "Bret",
+      website: "hildgard.org"
     },
     {
       id : 2,  
@@ -18,7 +20,7 @@ const Users = () => {
       email: "janesmith@example.com",
       phone: "987-654-3210",
       username: "janesmith",
-      website: "www.janesmith.com"
+      website: "www.hildgard.org"
     },
     {
       id : 3,  
@@ -45,10 +47,19 @@ const Users = () => {
       website: "www.charliedavis.com"
     }
   ];
-  const user = users.find(user => user.id === parseInt(id));
+  useEffect(() => {
+    setTimeout(()  => {
+        const foundId = users.find((user) => user.id === parseInt(id))
+        setUser(foundId);
+        setLoading(false);
+    },1000);
+  },[id])
   return (
     <div>
         {
+            loading ? (
+                <div>Loading...</div>
+            ) : (
             user ? (
                 <div>
                     <h1>User Details</h1>
@@ -59,8 +70,9 @@ const Users = () => {
                     <p><strong>website:</strong> {user.website}</p>
                 </div>
             ) : (
-        <div>Loading...</div>
+       <p>User not Found</p>
       )
+    )
         }
     </div>
   )
