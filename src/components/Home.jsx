@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div>
+        <h1>User List</h1>
         <ul>
         <li>
           <Link to="/users/1">John Doe</Link>

@@ -6,11 +6,11 @@ const Users = () => {
      const users = [
     {
       id : 1,  
-      name: "John Doe",
-      email: "johndoe@example.com",
+      name: "Leanne Graham",
+      email: "Leanne Graham@example.com",
       phone: "123-456-7890",
-      username: "johndoe",
-      website: "www.johndoe.com"
+      username: "Leanne Graham",
+      website: "www.Leanne Graham.com"
     },
     {
       id : 2,  
@@ -59,7 +59,7 @@ const Users = () => {
                     <p><strong>website:</strong> {user.website}</p>
                 </div>
             ) : (
-        <p>User not found</p>
+        <div>Loading...</div>
       )
         }
     </div>
