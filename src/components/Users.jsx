@@ -12,7 +12,7 @@ const Users = () => {
       email: "Sincere@april.biz",
       phone: "1-770-736-8031 x56442",
       username: "Bret",
-      website: "hildgard.org"
+      website: "hildegard.org"
     },
     {
       id : 2,  
