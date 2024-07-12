@@ -10,7 +10,7 @@ const Users = () => {
       id : 1,  
       name: "Leanne Graham",
       email: "Sincere@april.biz",
-      phone: "123-456-7890",
+      phone: "1-770-736-8031 x56442",
       username: "Bret",
       website: "hildgard.org"
     },
